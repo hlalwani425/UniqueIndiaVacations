@@ -1,25 +1,13 @@
+*{
+  margin:0;
+  top:0;
+  padding:0;
+}
 body{
-    margin:0;
-    /* background-image: url('/images/RAMCHANDRATEMPLEFINALSUBMISSION3.jpg9241f7f9-ec72-4762-b76b-bf20dc381e90Zoom.jpg'); */
-   top:0;
-  padding:0;    
-  box-sizing: border-box;
-  position:relative;
+  margin:0;
+  top:0;
+  background-image: url('/images/RAMCHANDRATEMPLEFINALSUBMISSION3.jpg9241f7f9-ec72-4762-b76b-bf20dc381e90Zoom.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
-  img{
-     height: 100vh;
-    min-width:100vh;
-    /* position:relative; */
-    /* display: flex;
-    margin-left: auto;
-    margin-right: auto;
-    background-size: cover;
-     background-position: center  */
-   
-  }
-
- a .nav-link{
-    background-color:white;
-  }
-  
