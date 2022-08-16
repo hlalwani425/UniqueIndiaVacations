@@ -1,58 +1,105 @@
+@import url('https://fonts.googleapis.com/css2?family=PT+Serif&display=swap');
+
 *{
   margin:0;
   top:0;
   padding:0;
 }
-body{
-  margin:0;
-  top:0;
-  background-image: url('/images/RAMCHANDRATEMPLEFINALSUBMISSION3.jpg9241f7f9-ec72-4762-b76b-bf20dc381e90Zoom.jpg');
+ 
+header{
+  width:100%;
+  height: 100vh;
+  background-image:linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.1)),url('/images/ancient-4813651.jpg');
+  background-repeat:no-repeat;
   background-size: cover;
-  background-repeat: no-repeat; }
-  /* background-color: black; } */
+} 
 
-  .waves {
-    position:absolute;
-    width: 100%;
-    height:50vh;
-    top:75vh;
-    /* margin-bottom:-7px; Fix for safari gap */
-    min-height:200px;
-    max-height:150px;
-  }
+nav{
+  height:8vh;
+  width:100%;
+  display:flex;
+  color:white;
+  justify-content:space-between;
+  align-items:centre;
+}
 
-  .parallax > use {
-    animation: move-forever 25s cubic-bezier(.55,.5,.45,.5)     infinite;
+.logo_img{
+  height:10vh;
+}
+nav .menu{
+   display:flex;
+   justify-content:space-around;
+   width:40%;
+ 
+}
+ a{
+  text-decoration:none;
+  color: black;
+  padding:1rem;
+  font-weight:bold;
+  font-size: large;
+  font-family: 'PT Serif', serif;
+
+ } 
+
+main{
+  width:100%;
+  height:85%;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  text-align: center;
+}
+section{
+  color:white;
+}
+section h3{
+  font-size:35px;
+  font-weight:bold;
+  letter-spacing: 1px;
+   text-shadow: 1px 1px 5px black;
+
+}
+
+
+section h1{
+  margin:30px 0 20px 0;
+ font-size:55px;
+ font-weight:700;
+ text-shadow: 2px 1px 5px black;
+ text-transform:uppercase ;
+
+}
+
+nav .menu a:hover{
+  color:#2952aa;
+}
+
+section p{
+  font-size:25px;
+  color:azure;
+  letter-spacing: 1px;
+   text-shadow: 1px 1px 5px black;
+}
+
+.change_content:after {
+  content: "";
+  animation: changetext 10s infinite linear;
+  /* color: #2952aa; */
+}
+
+@keyframes changetext {
+  0% {
+    content: "WELCOME";
   }
-  .parallax > use:nth-child(1) {
-    animation-delay: -2s;
-    animation-duration: 7s;
+  33% {
+    content: "स्वागत";
   }
-  .parallax > use:nth-child(2) {
-    animation-delay: -3s;
-    animation-duration: 10s;
+  66% {
+    content: "ਸੁਆਗਤ ਹੈ";
   }
-  .parallax > use:nth-child(3) {
-    animation-delay: -4s;
-    animation-duration: 13s;
+  100% {
+    content: "સ્વાગત છે";
   }
-  .parallax > use:nth-child(4) {
-    animation-delay: -5s;
-    animation-duration: 20s;
-  }
-  @keyframes move-forever {
-    0% {
-     transform: translate3d(-90px,0,0);
-    }
-    100% { 
-      transform: translate3d(85px,0,0);
-    }
-  }
-  /*Shrinking for mobile*/
-  @media (max-width: 768px) {
-    .waves {
-      height:40px;
-      min-height:40px;
-    }
-  }
-  
+ 
+}
