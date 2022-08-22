@@ -4,14 +4,15 @@
    top:0;
 }
 body {
-    /* aspect-ratio: 1; */
+    top:0;
     max-width:100%;
     height: 100vh;
     background-image:url('/images/hawa-mahal-6688178.jpg');
-    background-repeat:no-repeat;
-    background-size: cover;
+    background-repeat:no-repeat; 
+    /* background-size: cover; */
+    background-size: 100%;
     background-position: center center;
-    background-attachment: fixed;
+   
   }
 h1{
     color:white;
@@ -87,9 +88,4 @@ section{
       }
     }
     
-    @media screen and (max-width: 1000px){
-        body{
-            width:100%;
-        
-          } 
-    }
+  
