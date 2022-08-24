@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta name="robots" content="noindex,nofollow" />
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Rental | Property details</title>
+
+  <!-- <link href="/bootstrap.min.css" rel="stylesheet"> -->
+  <link href="https://fonts.googleapis.com/css?family=Poppins&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="assets/vendor/quill/quill.snow.css" rel="stylesheet">
+  <link href="assets/vendor/quill/quill.bubble.css" rel="stylesheet">
+  <link href="assets/vendor/remixicon/remixicon.css" rel="stylesheet">
+  <link href="assets/vendor/simple-datatables/style.css" rel="stylesheet">
+
+
+  
+  <!-- for slider -->
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <link rel="stylesheet" href="assets/css/viewproperty.css">
+  <!-- <link href="admin/assets/css/style.css" rel="stylesheet" type="text/css" media="all"> -->
+  <link href="assets/css/style.css" rel="stylesheet">
+  <!-- http call js-->
+  <script src="/js/rentalapplication.js"></script>
+  <script src="/js/url.js"></script>
+  <script src="js/jquery-1.9.1.min.js"></script>
+
+  <!-- title -->
+  <script>
+    window.document.title = title_head + " | Property details";
+  </script>
+  <script>
+    let url = window.location.search;
+    let searchParams = new URLSearchParams(url);
+    let propertyID = searchParams.get("propertyID");  
+  </script>
+  <!--
+  <script>
+    window.onload = function () {
+
+      if (propertyID == null) {
+        window.location.href = window.location.protocol + "//" + window.location.host + "/error.html";
+
+      }
+      else {
+
+        viewProperty(propertyID);
+
+      }
+    }
+  </script>
+-->
+
+<style>
+  .carousel-inner{
+    margin-left: 0px;
+  }
+</style>
+
+</head>
+
+<body>
+  <header id="header" class="header fixed-top d-flex align-items-center">
+
+    <div class="d-flex align-items-center justify-content-between">
+      <a href="index.html" class="logo d-flex align-items-center">
+        <!-- <img src="admin\assets/img/logo.png" alt=""> -->
+        <span class="d-none d-lg-block">Rental Application</span>
+      </a>
+      <!-- <i class="bi bi-list toggle-sidebar-btn"></i> -->
+    </div><!-- End Logo -->
+  </header><!-- End Header -->
+
+
+  <section id="center" class="center_list_detail">
+    <div class="center_main_about clearfix">
+      <div class="container">
+        <div class="row">
+          <div class="center clearfix">
+            <h1> Property Detail </h1>
+            <!-- <p id="type"></p><span>in</span><span id="houseNo"></span><span id="streetAddress"></span><span id="city"></span><span id="zip"></span><span id="state"></span><span id="country"></span> -->
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="list_detail">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-9">
+          <div class="list_detail_lm clearfix">
+
+            <div id="custCarousel" class="carousel slide" data-ride="carousel" align="center">
+              <!-- slides -->
+              <div class="carousel-inner">
+                
+                <div class="w3-content" style="max-width:800px">
+                  <img class="mySlides" src="\Intern\assets\img\slides-1.jpg" style="width:100%">
+                  <img class="mySlides" src="\Intern\assets\img\slides-2.jpg" style="width:100%">
+                  <img class="mySlides" src="\Intern\assets\img\slides-3.jpg" style="width:100%">
+                </div>
+                
+                <div class="w3-center">
+                  <div class="w3-section">
+                    <button class="w3-button w3-light-grey" onclick="plusDivs(-1)">❮ Prev</button>
+                    <button class="w3-button w3-light-grey" onclick="plusDivs(1)">Next ❯</button>
+                  </div>
+                  <button class="w3-button demo" onclick="currentDiv(1)">1</button> 
+                  <button class="w3-button demo" onclick="currentDiv(2)">2</button> 
+                  <button class="w3-button demo" onclick="currentDiv(3)">3</button> 
+                </div>
+
+                <!--
+                <div class="carousel-item">
+                  <img src="assets/img/cardimg2.jpg" alt="Hills">
+                </div>
+
+                <div class="carousel-item">
+                  <img src="assets/img/img for card.jpg" alt="Hills">
+                </div>
+
+                <div class="carousel-item">
+                  <img src="assets/img/slides-1.jpg" alt="Hills">
+                </div>
+                <div class="carousel-item active">
+                  <img src="assets/img/card.jpg" alt="Hills">
+                </div>
+              </div>
+            -->
+
+                <!-- Left right  -->
+                <a class="carousel-control-prev" href="#custCarousel" data-slide="prev">
+                  <span class="carousel-control-prev-icon"></span>
+                </a>
+                <a class="carousel-control-next" href="#custCarousel" data-slide="next">
+                  <span class="carousel-control-next-icon"></span>
+                </a>
+              
+
+                <!-- Thumbnails -->
+                <ol class="carousel-indicators list-inline">
+                  <li class="list-inline-item active">
+                    <a id="carousel-selector-0" class="selected" data-slide-to="0" data-target="#custCarousel">
+                      <img src="assets/img/card.jpg" class="img-fluid">
+                    </a>
+                  </li>
+
+                  <li class="list-inline-item">
+                    <a id="carousel-selector-1" data-slide-to="1" data-target="#custCarousel">
+                      <img src="assets/img/cardimg2.jpg" class="img-fluid">
+                    </a>
+                  </li>
+
+                  <li class="list-inline-item">
+                    <a id="carousel-selector-2" data-slide-to="2" data-target="#custCarousel">
+                      <img src="assets/img/img for card.jpg" class="img-fluid">
+                    </a>
+                  </li>
+
+                  <li class="list-inline-item">
+                    <a id="carousel-selector-2" data-slide-to="3" data-target="#custCarousel">
+                      <img src="assets/img/slides-1.jpg" class="img-fluid">
+                    </a>
+                  </li>
+                </ol>
+              </div>
+
+              <!-- Wrapper for slides -->
+
+              <!-- </div> -->
+              <div class="list_detail_lm2 clearfix">
+                <div class="col-sm-6">
+                  <div class="list_detail_lm2l">
+                    <div class="list_info">
+                      <div class="row ">
+                        <div class="col-lg-5 col-md-4 label fdesign " style="font: bold;">Type</div>
+                        <div id="type" class="col-lg-7 col-md-8"></div>
+                      </div>
+                      <div class="row">
+                        <div class="col-lg-5 col-md-4 label fdesign">Bedrooms</div>
+                        <div id="bedrooms" class="col-lg-7 col-md-8"></div>
+                      </div>
+                      <div class="row">
+                        <div class="col-lg-5 col-md-4 label fdesign">Bathrooms</div>
+                        <div id="bathrooms" class="col-lg-7 col-md-8"></div>
+                      </div>
+                      <div class="row">
+                        <div class="col-lg-5 col-md-4 label fdesign">SquareFeet(ft^2)</div>
+                        <div id="squareFeet" class="col-lg-7 col-md-8"></div>
+                      </div>
+                      <div class="row">
+                        <div class="col-lg-5 col-md-4 label fdesign">Furnishing</div>
+                        <div id="furnishing" class="col-lg-7 col-md-8"></div>
+                      </div>
+                      <div class="row">
+                        <div class="col-lg-5 col-md-4 label fdesign">Car Parking</div>
+                        <div id="carParking" class="col-lg-7 col-md-8"></div>
+                      </div>
+                      <div class="row">
+                        <div class="col-lg-5 col-md-4 label fdesign">Car Parking Type</div>
+                        <div id="carParkingType" class="col-lg-7 col-md-8"></div>
+                      </div>
+                      <div class="row">
+                        <div class="col-lg-5 col-md-4 label fdesign">Rent Amount</div>
+                        <div id="rentAmount" class="col-lg-7 col-md-8"></div>
+                      </div>
+                      <div class="row">
+                        <div class="col-lg-5 col-md-4 label fdesign">Rental Rate</div>
+                        <div id="rentalRate" class="col-lg-7 col-md-8"></div>
+                      </div>
+                      <div class="row">
+                        <div class="col-lg-5 col-md-4 label fdesign ">House Number</div>
+                        <div id="houseNo" class="col-lg-7 col-md-8"></div>
+                      </div>
+                      <div class="row">
+                        <div class="col-lg-5 col-md-4 label fdesign">Street Address</div>
+                        <div id="streetAddress" class="col-lg-7 col-md-8"></div>
+                      </div>
+                      <div class="row">
+                        <div class="col-lg-5 col-md-4 label fdesign">City</div>
+                        <div id="city" class="col-lg-7 col-md-8"></div>
+                      </div>
+                      <div class="row">
+                        <div class="col-lg-5 col-md-4 label fdesign">Zip Code</div>
+                        <div id="zip" class="col-lg-7 col-md-8"></div>
+                      </div>
+
+                      <div class="row">
+                        <div class="col-lg-5 col-md-4 label fdesign">State</div>
+                        <div id="state" class="col-lg-7 col-md-8"></div>
+                      </div>
+                      <div class="row">
+                        <div class="col-lg-5 col-md-4 label fdesign">Country</div>
+                        <div id="country" class="col-lg-7 col-md-8"></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+
+
+
+
+            </div>
+          </div>
+          <div class="col-sm-3">
+            <div class="list_detail_rm clearfix">
+              <div class="list_detail_rm_1 clearfix">
+                <ul>
+                  <li class="bg_1"><span id="rentAmount"></span></li>
+                  <!-- <li class="bg_2"><a href="#"><i class="fa fa-phone"></i> (123) 345-6789</a></li>
+		 <li class="bg_2"><a href="#"><i class="fa fa-map-marker"></i> See Map</a></li>
+		 <li class="bg_2"><a href="#"><i class="fa fa-heart-o"></i> Add to favorite</a></li> -->
+
+                </ul>
+              </div>
+              <div class="list_detail_rm_2 clearfix">
+                <h3>Contact</h3>
+                <input class="form-control" placeholder="Your name" type="text">
+                <input class="form-control" placeholder="Phone" type="text">
+                <input class="form-control" placeholder="Email" type="text">
+                <textarea placeholder="Your Message" class="form-control form_1"></textarea>
+                <h4><a href="#">SEND</a></h4>
+              </div>
+              <div class="list_detail_rm_3 clearfix">
+                <h3>Name</h3>
+                <a href="#"><img src="assets/img/messages-3.jpg" style="width:100%;" alt="abc"></a>
+                <ul>
+                  <li><a href="#"><i class="fa fa-phone"></i> (123) 345-6789</a></li>
+                  <li><a href="#"><i class="fa fa-envelope"></i> info@gmail.com</a></li>
+                  <li><span>Organization:</span> MyHome</li>
+                </ul>
+              </div>
+              <div class="blog_4">
+                <a href="#"><img src="assets/img/cardimg2.jpg" alt="img" style="width:100%;"></a>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+  </section>
+  <footer id="footer" class="footer">
+    <div class="copyright">
+      &copy; Copyright <strong><span>A2ZSolutions LLC</span></strong>. All Rights Reserved
+    </div>
+    <div class="credits">
+      Designed by <a href="http://infinity-ventures.com/" target="_blank">Infinity Ventures (India) Pvt Ltd</a>
+    </div>
+  </footer><!-- End Footer -->
+
+
+
+  <script>
+
+var myIndex = 0;
+carousel();
+
+function carousel() {
+  var i;
+  var x = document.getElementsByClassName("mySlides");
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";  
+  }
+  myIndex++;
+  if (myIndex > x.length) {myIndex = 1}    
+  x[myIndex-1].style.display = "block";  
+  setTimeout(carousel, 2000); // Change image every 2 seconds
+}
+
+
+
+
+
+    var slideIndex = 1;
+    showDivs(slideIndex);
+    
+    function plusDivs(n) {
+      showDivs(slideIndex += n);
+    }
+    
+    function currentDiv(n) {
+      showDivs(slideIndex = n);
+    }
+    
+    function showDivs(n) {
+      var i;
+      var x = document.getElementsByClassName("mySlides");
+      var dots = document.getElementsByClassName("demo");
+      if (n > x.length) {slideIndex = 1}
+      if (n < 1) {slideIndex = x.length}
+      for (i = 0; i < x.length; i++) {
+        x[i].style.display = "none";  
+      }
+      for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" w3-white", "");
+      }
+      x[slideIndex-1].style.display = "block";  
+      dots[slideIndex-1].className += " w3-white";
+    }
+    </script>
+</body>
+
+</html>
