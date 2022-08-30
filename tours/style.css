@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Qwitcher+Grypen:wght@700&display=swap');
 :root {
   --navbar-bg-color: hsl(0, 0%, 15%);
   --navbar-text-color: hsl(0, 0%, 85%);
@@ -5,7 +6,8 @@
   --navbar-bg-contrast: hsl(0, 0%, 25%);
   --clr-neutral-900: hsl(207,19%,9%);
   --clr-neutral-100: hsl(0,0%,100%);
-  --clr-neutral-400: hsl(142 90%  61%);
+  --clr-accent-400: hsl(142 90%  61%);
+  
 }
 * {
   box-sizing: border-box;
@@ -17,8 +19,8 @@ body {
   height: 100vh;
   font-family: Arial, Helvetica, sans-serif;
   line-height: 1.6;
-  position:fixed;
-  background-image: url('/UniqueIndiaVacations/images/hawa-mahal-6688178.jpg');
+  position:relative;
+  background-image: url('/images/hawa-mahal-6688178.jpg');
   background-repeat: no-repeat;
   background-size: cover;
   overflow: hidden;
@@ -153,52 +155,83 @@ body {
 .card{
   background: var(--clr-neutral-100);
   position:absolute;
-  border-radius: 15px;
+  border-radius: 10px;
   padding:10rem 0 0; 
   margin:2rem;
   overflow: hidden;
   background-size: cover;
   max-width: 28ch;
-  /* height:40ch;  */
-  background-image:url('/UniqueIndiaVacations/images/istockphoto-1412247854-170667a.jpg');
-}
-/* .card p, h2{
+  /* height:45ch;  */
+  background-image:url('/images/istockphoto-1412247854-170667a.jpg');
+   transition: transform 500ms ease;
+  
+  }
+  /* .card p, h2{
   padding:1rem;
 }
 .button{
   padding: 1rem;
   
 } */
-
+.card:hover{
+  transform: scale(1.05);
+}
+.card-content .card-hover{
+  transform:translateY(0);
+}
 .card-title{
-  position: relative;
+  position: relative; 
   width: max-content;
+  color:white;
+  opacity:0.9;
+  font-size:50px;
+  /* top:-2rem; */
+  /* outline: 1px solid red; */
 }
 .card-content{
-  padding:1.5em ;
-  background:linear-gradient(hsl(0 0% 0% /0), hsl( 225 50% 50% / 0.3) 20%,
-  hsl(0 0% 0% /1));
-  /* position: relative;  */
-  width:max-content;
+  --padding:1.5em ;
+    padding: var(--padding);
+    background:linear-gradient(hsl(0 0% 0% /0), hsl( 225 50% 50% / 0.3) 20%,
+    hsl(0 0% 0% /1));
+    transform:translateY(74%);
+    transition: transform 500ms ease;
+    border-radius:10px;
+    font-family: 'Qwitcher Grypen', cursive;
+
+    /* position: relative;  */
+    /* width:max-content; */
 }
 
+.card-body {
+  color:rgb(255 255 255 / 0.5);
+  font-family: 'Qwitcher Grypen', cursive;
+  /* overflow: hidden; */
+}
 .card-title ::after{
   content:"";
-  position:absolute;
-  height:3px;
+  /* position:absolute; */
   width:calc(100% + var(--padding));
+  transition: transform 500ms ease;
+  height:4px;
+  transform-origin: left;
   left: calc(var(--padding)* -1);
-  bottom :0;
+  bottom :-2px;
   background: var(--clr-accent-400);
+  transition: left;
+  
 }
-a .button{
+.card:hover .card-content{
+  transform: scaleX(1);
+
+}
+ .button{
   cursor:pointer;
   display: inline-block;
   text-decoration:none;
   background-color: var(--clr-accent-400);
   color: var(--clr-neutral-900);
-  padding: .5em 1.25em;
-  /* padding: */
+  padding:0.5em 1.25em;
+  border-radius: 3px;
 }
 .button:hover, .button:focus{
 background-color: var(--clr-neutral-100);
