@@ -3,6 +3,9 @@
   --navbar-text-color: hsl(0, 0%, 85%);
   --navbar-text-color-focus: white;
   --navbar-bg-contrast: hsl(0, 0%, 25%);
+  --clr-neutral-900: hsl(207,19%,9%);
+  --clr-neutral-100: hsl(0,0%,100%);
+  --clr-neutral-400: hsl(142 90%  61%);
 }
 * {
   box-sizing: border-box;
@@ -14,12 +17,15 @@ body {
   height: 100vh;
   font-family: Arial, Helvetica, sans-serif;
   line-height: 1.6;
-  position:fixed;
-  background-image: url('/UniqueIndiaVacations/images/hawa-mahal-6688178.jpg');
+  /* positions:fixed; */
+  background-image: url('/images/hawa-mahal-6688178.jpg');
   background-repeat: no-repeat;
   background-size: cover;
   overflow: hidden;
+  place-items: center;
+  display: grid;
 }
+
 .container {
   max-width: 1000px;
   padding-left: 1.4rem;
@@ -145,6 +151,57 @@ body {
 
 #navbar-toggle[aria-expanded="true"] + #navbar-menu .navbar-links {
   padding: 1em;
+}
+
+.card{
+  background: var(--clr-neutral-100);
+  position:absolute;
+  border-radius: 15px;
+  padding:10rem 0 0; 
+  margin:2rem;
+  overflow: hidden;
+  background-size: cover;
+  max-width: 25ch;
+  /* height:30ch;  */
+  background-image:url('/images/istockphoto-1412247854-170667a.jpg');
+}
+/* .card p, h2{
+  padding:1rem;
+}
+.button{
+  padding: 1rem;
+  
+} */
+.card-content{
+  position: relative; 
+  width:max-content;
+}
+.card-content{
+  padding:1.5em ;
+  background:linear-gradient(hsl(0 0% 0% /0), hsl( 225 50% 50% / 0.3) 20%,
+  hsl(0 0% 0% /1));
+}
+
+.card-title ::after{
+  content:"";
+  position:absolute;
+  height:3px;
+  width:calc(100% + var(--padding));
+  left: calc(var(--padding)* -1);
+  bottom :0;
+  background: var(--clr-accent-400);
+}
+.button{
+  cursor:pointer;
+  display: inline-block;
+  text-decoration: none;
+  background-color: var(--clr-accent-400);
+  color: var(--clr-neutral-900);
+  padding: .5em 1.25em;
+  /* padding: */
+}
+.button:hover, .button:focus{
+background-color: var(--clr-neutral-100);
 }
 @media screen and (min-width: 700px) {
   #navbar-toggle,
