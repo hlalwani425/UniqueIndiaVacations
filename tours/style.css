@@ -17,15 +17,12 @@ body {
   height: 100vh;
   font-family: Arial, Helvetica, sans-serif;
   line-height: 1.6;
-  /* positions:fixed; */
-  background-image: url('/images/hawa-mahal-6688178.jpg');
+  position:fixed;
+  background-image: url('/UniqueIndiaVacations/images/hawa-mahal-6688178.jpg');
   background-repeat: no-repeat;
   background-size: cover;
   overflow: hidden;
-  place-items: center;
-  display: grid;
 }
-
 .container {
   max-width: 1000px;
   padding-left: 1.4rem;
@@ -231,5 +228,101 @@ background-color: var(--clr-neutral-100);
 }
 
 
-    
-  
+
+eader {
+  max-height: 100vh;
+}
+
+h1 {
+  color: white;
+  background-color: none;
+}
+
+
+.heading_hindi {
+  top: 50vh;
+}
+
+section {
+  color: white;
+  height: 85%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+section h3 {
+  font-size: 2vw;
+  /* font-weight:bold; */
+  letter-spacing: 1px;
+  text-shadow: 2px 2px 5px black;
+ 
+}
+
+.heading h1 h2 h3{
+  align-items: center;
+}
+
+section h1 h2 h3{
+  margin: 30px 0 20px 0;
+  font-size: 4vw;
+  font-weight: 700;
+  text-shadow: 2px 1px 5px black;
+  text-transform: uppercase;
+
+}
+
+.change_content:after {
+  content: "";
+  animation: changetext 10s infinite linear;
+  color: rgb(176, 199, 226);
+}
+
+@keyframes changetext {
+  0% {
+    content: "WELCOME";
+    color: rgb(176, 199, 226);
+  }
+
+  16.5% {
+    content: "स्वागत";
+    color: #f3c330;
+  }
+
+  33% {
+    content: "Bienvenue";
+    color: #be9a2e;
+  }
+
+  49.5% {
+    content: "Bienvenidas";
+    color: #967512;
+  }
+
+  66% {
+    content: "Benvenuta";
+    color: rgb(156, 176, 199);
+  }
+
+  82.5% {
+    content: "Herzlich willko";
+    color: rgb(120, 154, 192);
+  }
+
+  100% {
+    content: "ברוך הבא";
+    color: rgb(196, 206, 218);
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
