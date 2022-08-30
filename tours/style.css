@@ -158,9 +158,9 @@ body {
   margin:2rem;
   overflow: hidden;
   background-size: cover;
-  max-width: 25ch;
-  /* height:30ch;  */
-  background-image:url('/images/istockphoto-1412247854-170667a.jpg');
+  max-width: 28ch;
+  /* height:40ch;  */
+  background-image:url('/UniqueIndiaVacations/images/istockphoto-1412247854-170667a.jpg');
 }
 /* .card p, h2{
   padding:1rem;
@@ -169,14 +169,17 @@ body {
   padding: 1rem;
   
 } */
-.card-content{
-  position: relative; 
-  width:max-content;
+
+.card-title{
+  position: relative;
+  width: max-content;
 }
 .card-content{
   padding:1.5em ;
   background:linear-gradient(hsl(0 0% 0% /0), hsl( 225 50% 50% / 0.3) 20%,
   hsl(0 0% 0% /1));
+  /* position: relative;  */
+  width:max-content;
 }
 
 .card-title ::after{
@@ -188,10 +191,10 @@ body {
   bottom :0;
   background: var(--clr-accent-400);
 }
-.button{
+a .button{
   cursor:pointer;
   display: inline-block;
-  text-decoration: none;
+  text-decoration:none;
   background-color: var(--clr-accent-400);
   color: var(--clr-neutral-900);
   padding: .5em 1.25em;
@@ -229,7 +232,7 @@ background-color: var(--clr-neutral-100);
 
 
 
-eader {
+header {
   max-height: 100vh;
 }
 
