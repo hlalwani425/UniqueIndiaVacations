@@ -17,9 +17,9 @@
     padding: 0;
     top: 0;
 }
+
 .sec-2{
     height:100vh;
-    /* display:grid; */
   }
 .card{
     background: var(--clr-neutral-100);
@@ -54,14 +54,11 @@
       padding: var(--padding);
       background:linear-gradient(hsl(0 0% 0% /0), hsl( 225 50% 50% / 0.3) 20%,
       hsl(0 0% 0% /1));
-      transform:translateY(60%);
+      transform:translateY(61%);
       transition: transform 500ms ease;
       border-radius:10px;
       font-family: 'Qwitcher Grypen', cursive;
-      /* top:-3rem; */
-      /* position: relative;  */
-      /* z-index: 10;   
-      /* width:min-content;  */
+     
   }
   
   .card-body {
@@ -71,7 +68,6 @@
   }
   .card-title ::after{
     content:"";
-    /* position:absolute; */
     width:calc(100% + var(--padding));
     transition: transform 500ms ease;
     height:4px;
